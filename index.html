@@ -17,9 +17,9 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      font-family: 'Segoe UI', sans-serif;
       background: var(--bg-dark);
       color: var(--text-light);
+      font-family: 'Segoe UI', sans-serif;
       overflow-x: hidden;
     }
 
@@ -30,26 +30,12 @@
       z-index: -1;
     }
 
-    /* HERO SECTION */
+    /* HERO BANNER */
     .hero {
       position: relative;
-      height: 60vh;
-      min-height: 350px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-      padding: 10px;
-    }
-
-    .hero-images {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
+      height: 300px;
+      overflow: hidden;
     }
 
     .hero-images img {
@@ -65,67 +51,47 @@
       opacity: 1;
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 20px 15px;
-      border-radius: 10px;
-      backdrop-filter: blur(4px);
-      box-shadow: 0 0 20px var(--neon-green);
-      max-width: 90%;
-    }
-
-    .hero-content h1 {
-      font-size: 2.5em;
-      margin: 10px 0;
-      color: var(--neon-green);
-      text-shadow: 0 0 10px var(--neon-purple);
-      animation: glow 2s infinite alternate;
-    }
-
-    .hero-content p {
-      font-size: 1em;
-      color: var(--neon-blue);
-      text-shadow: 0 0 6px var(--neon-blue);
+    .content {
+      padding: 30px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .logo {
-      width: 100px;
-      max-width: 150px;
+      display: block;
+      width: 150px;
+      max-width: 100%;
+      margin: 0 auto 20px;
       border-radius: 10px;
-      margin-bottom: 15px;
       box-shadow: 0 0 15px var(--neon-green);
     }
 
-    @media (max-width: 768px) {
-      .hero-content h1 {
-        font-size: 1.8em;
-      }
-      .hero-content p {
-        font-size: 0.9em;
-      }
-      .logo {
-        width: 80px;
-        margin-bottom: 10px;
-      }
+    h1 {
+      text-align: center;
+      color: var(--neon-green);
+      text-shadow: 0 0 10px var(--neon-purple);
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      animation: glow 2s infinite alternate;
     }
 
-    main {
-      padding: 30px;
+    p {
+      text-align: center;
+      color: var(--neon-blue);
+      max-width: 700px;
+      margin: 0 auto 30px;
+      text-shadow: 0 0 6px var(--neon-blue);
     }
 
     section {
-      max-width: 1200px;
-      margin: auto;
-      margin-bottom: 60px;
+      margin-top: 50px;
     }
 
     section h2 {
       text-align: center;
       color: var(--neon-purple);
-      font-size: 2.8em;
-      margin-bottom: 40px;
+      font-size: 2.5em;
+      margin-bottom: 30px;
       text-shadow: 0 0 15px var(--neon-purple);
     }
 
@@ -133,10 +99,10 @@
       background: rgba(255, 255, 255, 0.08);
       border: 2px solid var(--neon-green);
       border-radius: 10px;
-      padding: 25px;
-      margin: 20px 0;
-      box-shadow: 0 0 25px var(--neon-green);
-      transition: all 0.3s ease;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 20px var(--neon-green);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
@@ -147,6 +113,7 @@
     .card h3 {
       color: var(--neon-green);
       text-shadow: 0 0 10px var(--neon-green);
+      margin-bottom: 10px;
     }
 
     ul {
@@ -158,67 +125,6 @@
       margin: 15px 0;
       border-left: 4px solid var(--neon-purple);
       padding-left: 15px;
-    }
-
-    .contact-btn {
-      display: inline-block;
-      background: var(--neon-blue);
-      color: var(--bg-dark);
-      text-decoration: none;
-      border: none;
-      padding: 15px 40px;
-      font-size: 1.3em;
-      border-radius: 8px;
-      cursor: pointer;
-      text-shadow: 0 0 5px var(--neon-green);
-      transition: background 0.3s ease, transform 0.3s ease;
-      box-shadow: 0 0 15px var(--neon-blue);
-    }
-
-    .contact-btn:hover {
-      background: var(--neon-green);
-      transform: scale(1.1);
-      box-shadow: 0 0 30px var(--neon-green);
-    }
-
-    footer {
-      background: var(--neon-purple);
-      text-align: center;
-      padding: 20px;
-      color: var(--bg-dark);
-    }
-
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 10px var(--neon-green);
-      }
-      to {
-        text-shadow: 0 0 30px var(--neon-green), 0 0 60px var(--neon-green);
-      }
-    }
-
-    .fade-in {
-      opacity: 0;
-      animation: fade 2s forwards;
-    }
-
-    @keyframes fade {
-      to {
-        opacity: 1;
-      }
-    }
-
-    .slide-up {
-      transform: translateY(50px);
-      opacity: 0;
-      animation: slideUp 1.5s forwards;
-    }
-
-    @keyframes slideUp {
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
     }
 
     .gallery {
@@ -239,6 +145,37 @@
     .gallery img:hover {
       transform: scale(1.1);
       box-shadow: 0 0 40px var(--neon-blue);
+    }
+
+    .contact-btn {
+      display: inline-block;
+      background: var(--neon-blue);
+      color: var(--bg-dark);
+      text-decoration: none;
+      border: none;
+      padding: 15px 40px;
+      font-size: 1.3em;
+      border-radius: 8px;
+      cursor: pointer;
+      text-shadow: 0 0 5px var(--neon-green);
+      transition: background 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 0 15px var(--neon-blue);
+      margin: 30px auto;
+      display: block;
+      width: fit-content;
+    }
+
+    .contact-btn:hover {
+      background: var(--neon-green);
+      transform: scale(1.1);
+      box-shadow: 0 0 30px var(--neon-green);
+    }
+
+    footer {
+      background: var(--neon-purple);
+      text-align: center;
+      padding: 20px;
+      color: var(--bg-dark);
     }
 
     .whatsapp-float {
@@ -266,6 +203,27 @@
       transform: scale(1.2);
       box-shadow: 0 0 40px var(--neon-green);
     }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px var(--neon-green);
+      }
+      to {
+        text-shadow: 0 0 30px var(--neon-green), 0 0 60px var(--neon-green);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: 180px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+      .logo {
+        width: 100px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -273,18 +231,17 @@
 
   <header class="hero">
     <div class="hero-images">
-      <img src="https://i.imgur.com/EWQ8KMv.png" class="active" />
-      <img src="https://i.imgur.com/AUp6IOe.png" />
-    </div>
-    <div class="hero-content">
-      <img src="https://i.imgur.com/S7H7OT1.jpeg" alt="Logo KOI" class="logo" />
-      <h1>Agencia KOI</h1>
-      <p>Pacto positivo en el medio ambiente en México</p>
+      <img src="https://i.imgur.com/8DfDuxd.png" class="active" alt="Banner 1" />
+      <img src="https://i.imgur.com/9bL9fP3.png" alt="Banner 2" />
     </div>
   </header>
 
-  <main>
-    <section id="benefits" class="slide-up">
+  <div class="content">
+    <img src="https://i.imgur.com/S7H7OT1.jpeg" alt="Logo KOI" class="logo" />
+    <h1>Agencia KOI</h1>
+    <p>Pacto positivo en el medio ambiente en México</p>
+
+    <section>
       <h2>Beneficios de nuestras charolas</h2>
       <div class="card">
         <h3>Sostenibilidad Ambiental</h3>
@@ -308,7 +265,7 @@
       </div>
     </section>
 
-    <section id="applications" class="slide-up">
+    <section>
       <h2>Aplicaciones y casos de éxito</h2>
       <div class="card">
         <h3>Casos de Éxito</h3>
@@ -324,7 +281,7 @@
       </div>
     </section>
 
-    <section id="process" class="slide-up">
+    <section>
       <h2>Tu proceso de compra es más corto</h2>
       <p>Ya que el proceso de fabricación se lleva a cabo desde México. Nuestros precios son altamente competitivos. Cumplimos con las normas de SEDEMA.</p>
       <ul>
@@ -334,18 +291,17 @@
       </ul>
     </section>
 
-    <section id="contact" class="fade-in">
+    <section>
       <h2>Contáctanos</h2>
       <p>Para cualquier consulta o pregunta, no dudes en llamarnos. Nuestro equipo amable y experto está listo para ayudarte. Valoramos tus comentarios y estamos aquí para brindarte un servicio excepcional. ¡Contáctanos hoy mismo y conectémonos!</p>
-      <a href="https://wa.me/525540174264" target="_blank" class="contact-btn">¡Contáctanos!</a>
+      <a href="https://wa.me/525540174264" class="contact-btn" target="_blank">¡Contáctanos!</a>
     </section>
-  </main>
+  </div>
 
-  <footer class="fade-in">
+  <footer>
     <p>&copy; 2025 Agencia KOI. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/525540174264" class="whatsapp-float" target="_blank" title="Chatea con nosotros en WhatsApp">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
   </a>
@@ -364,6 +320,7 @@
     const canvas = document.getElementById("bg");
     const ctx = canvas.getContext("2d");
     let particlesArray = [];
+
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
@@ -419,5 +376,3 @@
   </script>
 </body>
 </html>
-
-
